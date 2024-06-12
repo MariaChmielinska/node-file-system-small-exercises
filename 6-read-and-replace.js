@@ -9,12 +9,12 @@
  * @param {string} htmlFilePath - Ruta al fichero a modificar
  * @param {string} textToSearch - Texto a buscar
  * @param {string} textToReplace - Texto a reemplazar
- */
+ CALLBACK FUNCTION- callback hell -not good option, better use promises aawait or async function*/
 const fs = require('fs');
 const path = require('path'); // Asegúrate de importar el módulo 'path'
 
 function replaceTextInFile(htmlFilePath, textToSearch, textToReplace) {
-    const resultFilePath = path.join(path.dirname(htmlFilePath), 'result.html');
+const resultFilePath = path.join(path.dirname(htmlFilePath), 'result.html');
     
     fs.readFile(htmlFilePath, 'utf8', (err, data) => {
         if (err) {
